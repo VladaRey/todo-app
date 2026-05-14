@@ -1,5 +1,11 @@
 import { ClerkLoaded } from "@clerk/nextjs";
+import { Header } from "@/components/header";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-  return <ClerkLoaded>{children}</ClerkLoaded>;
+  return (
+    <ClerkLoaded>
+      <Header />
+      {children}
+    </ClerkLoaded>
+  );
 }
